@@ -30,7 +30,7 @@ This repository contains material for an uncertainty quantification (UQ) class o
     pip install -e .
 ```
 
-6. **Launch Jupyter notebook** The notebook is located at `notebooks/data_analysis.ipynb`.
+6. **Launch Jupyter notebook** The notebook is located in the `notebooks` directory.
 
 ## Contributors
 
