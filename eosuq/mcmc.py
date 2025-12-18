@@ -37,7 +37,7 @@ def log_likelihood(
     if sigma_sq <= 0:  # Only accept positive variances
         return np.float64(-np.inf)
     sigma = np.sqrt(sigma_sq)  # Standard deviation is the square root of variance
-    prediction_mean = c0 * x + s
+    prediction_mean = c0 + x * s
     loglik = np.sum(norm.logpdf(y, loc=prediction_mean, scale=sigma))
     return loglik
 
@@ -157,7 +157,7 @@ def trace_plot(samples: np.ndarray) -> None:
     """
     # Plot trace plots
     fig, axes = plt.subplots(3, figsize=(10, 7), sharex=True)
-    param_labels = ["$S$", "$C_0$", r"$\sigma^2$"]
+    param_labels = ["$C_0$", "$S$", r"$\sigma^2$"]
     for i in range(3):
         axes[i].plot(samples[:, i], color="b", alpha=0.3)
         axes[i].set_ylabel(param_labels[i])
@@ -193,9 +193,9 @@ def plot_samples_with_marginals(
         This function produces a plot and does not return a value.
     """
     # Define grids, indices, and labels for each variable
-    grids = [np.linspace(1.49, 1.54, 6_000), np.linspace(3.86, 3.94, 6_000)]
+    grids = [np.linspace(3.86, 3.94, 6_000), np.linspace(1.49, 1.54, 6_000)]
     indices = [0, 1]
-    labels = ["$S$", "$C_0$"]
+    labels = ["$C_0$", "$S$"]
 
     # Plot histograms of the samples with actual posterior density
     fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(10, 4))
@@ -217,7 +217,7 @@ def plot_samples_with_marginals(
         )
 
         # Marginal posterior density
-        rv = multivariate_t(loc=beta_hat[1 - idx], shape=Sigma[1 - idx, 1 - idx], df=nu)
+        rv = multivariate_t(loc=beta_hat[idx], shape=Sigma[idx, idx], df=nu)
         ax.plot(
             grid,
             rv.pdf(grid),
@@ -274,7 +274,7 @@ def posterior_pairs_plot(
     corner.corner(
         samples,
         labels=labels,
-        truths=[beta_hat[1], beta_hat[0], 0.0045],
+        truths=[beta_hat[0], beta_hat[1], 0.0045],
     )
 
 
@@ -357,7 +357,7 @@ def plot_acf_of_chains(
             "samples array must be 3-dimensional (n_samples, n_other_dim, n_chains)"
         )
 
-    param_labels = ["$S$", "$C_0$", r"$\sigma^2$"]
+    param_labels = ["$C_0$", "$S$", r"$\sigma^2$"]
 
     fig, axes = plt.subplots(1, 3, figsize=figsize, sharey=True)
 
