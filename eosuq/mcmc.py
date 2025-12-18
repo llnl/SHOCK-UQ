@@ -183,7 +183,7 @@ def plot_samples_with_marginals(
     beta_hat : np.ndarray
         Posterior mean estimates for model parameters.
     Sigma : np.ndarray
-        Posterior covariance matrix for model parameters.
+        Posterior shape matrix.
     nu : int
         Degrees of freedom for the posterior.
 

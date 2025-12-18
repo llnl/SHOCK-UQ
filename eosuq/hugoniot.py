@@ -69,7 +69,7 @@ def sample_Hugoniot(
     beta_hat : np.ndarray
         Posterior mean of the model parameters.
     Sigma : np.ndarray
-        Posterior covariance matrix of the model parameters.
+        Posterior shape matrix.
     nu : int
         Degrees of freedom for the multivariate t-distribution.
     n_sample : int
@@ -144,7 +144,7 @@ def plot_Hugoniot_samples(
     beta_hat : np.ndarray
         Posterior mean of the model parameters.
     Sigma : np.ndarray
-        Posterior covariance matrix of the model parameters.
+        Posterior shape matrix.
     nu : int
         Degrees of freedom for the multivariate t-distribution.
     n_sample : int

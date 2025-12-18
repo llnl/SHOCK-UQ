@@ -75,7 +75,7 @@ def evaluate_joint_pdf(
     beta_hat : np.ndarray
         Mean vector (posterior mean) of the regression coefficients, shape (2,).
     Sigma : np.ndarray
-        Scale (covariance) matrix of the distribution, shape (2, 2).
+        Shape matrix of the distribution, shape (2, 2).
     nu : int
         Degrees of freedom for the t-distribution.
     c0_range : tuple[float, float], optional
@@ -121,7 +121,7 @@ def plot_joint_posterior(
     beta_hat : np.ndarray
         Posterior mean vector of the regression coefficients.
     Sigma : np.ndarray
-        Posterior scale (covariance) matrix.
+        Posterior shape matrix.
     nu : int
         Degrees of freedom for the posterior distribution.
 
