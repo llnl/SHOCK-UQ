@@ -17,7 +17,7 @@ def compute_posterior_parameters(
     Compute the posterior parameters for the linear Hugoniot model.
 
     This function calculates the least squares estimates of the regression coefficients,
-    the posterior scale matrix, the residual variance, and the degrees of freedom for
+    the posterior shape matrix, the residual variance, and the degrees of freedom for
     the model, given a DataFrame of measurements.
 
     Parameters
@@ -29,8 +29,8 @@ def compute_posterior_parameters(
     -------
     beta_hat : np.ndarray
         Estimated regression coefficients (posterior mean).
-    scale_matrix : np.ndarray
-        Posterior scale matrix for the coefficients.
+    shape_matrix : np.ndarray
+        Posterior shape matrix for the coefficients.
     s_sq : np.float64
         Estimated residual variance.
     nu : int
@@ -50,9 +50,9 @@ def compute_posterior_parameters(
 
     # Scale matrix for the posterior distribution
     XTX_inv = np.linalg.inv(X.T @ X)
-    scale_matrix = s_sq * XTX_inv
+    shape_matrix = s_sq * XTX_inv
 
-    return beta_hat, scale_matrix, s_sq, nu
+    return beta_hat, shape_matrix, s_sq, nu
 
 
 def evaluate_joint_pdf(
