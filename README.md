@@ -35,7 +35,7 @@ This repository contains material for an uncertainty quantification (UQ) class o
 ## Contributors
 
 - Jason Bernstein (Lawrence Livermore National Laboratory)
-- Justin Brown (Sandia National Laboratory)
+- Justin Brown (Sandia National Laboratories)
 - Beth Lindquist (Los Alamos National Laboratory)
 
 ## License
