@@ -29,7 +29,7 @@ def draw_samples(
     np.ndarray
         Array of shape (n, 2) containing bootstrap estimates of [C_0, S].
     """
-    # Pre-allocate space to store bootstrap estimates of C_0 and s
+    # Pre-allocate space to store bootstrap estimates of C_0 and S
     samples = np.zeros((n, 2))
 
     for i in range(n):
