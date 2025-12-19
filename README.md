@@ -42,7 +42,7 @@ This repository contains material for an uncertainty quantification (UQ) class o
 
 This software is distributed under the terms of the MIT license.  All new contributions must be made under the MIT license.
 
-See Link to LICENSE and NOTICE for details.
+See LICENSE and NOTICE for details.
 
 ## Release
 
