@@ -12,7 +12,7 @@ def plot_raw_data(df: pd.DataFrame) -> None:
 
     Parameters
     ----------
-    df : pd.DataFrame)
+    df : pd.DataFrame
         A DataFrame containing at least the columns 'Up_km_s' (particle
         velocity in km/s) and 'Us_km_s' (shock velocity in km/s).
 
