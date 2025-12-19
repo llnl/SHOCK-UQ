@@ -52,7 +52,7 @@ def plot_marginal_bootstrap_distributions(samples: np.ndarray) -> None:
     Parameters
     ----------
     samples : np.ndarray
-        Array of shape (n, 2) containing bootstrap estimates of [C_0, s].
+        Array of shape (n, 2) containing bootstrap estimates of [C_0, S].
 
     Returns
     -------
