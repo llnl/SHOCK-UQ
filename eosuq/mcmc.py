@@ -279,7 +279,7 @@ def posterior_pairs_plot(
 
 
 def plot_marginal_density_sigma_sq(
-    df: int,
+    df: pd.DataFrame,
     s_sq: np.float64,
     samples: np.ndarray,
 ) -> None:
@@ -289,8 +289,8 @@ def plot_marginal_density_sigma_sq(
 
     Parameters
     ----------
-    df : int
-        Degrees of freedom for the inverse gamma distribution.
+    df : pd.DataFrame
+        DataFrame containing the input and response data.
     s_sq : np.float64
         Scale parameter for the inverse gamma distribution.
     samples : np.ndarray
