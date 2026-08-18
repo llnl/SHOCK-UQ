@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eosuq"
+version = "0.1.0"
+description = "Uncertainty quantification for equation of state from linear shock compression data"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Jason Bernstein", email = "bernstein8@llnl.gov"},
+    {name = "Justin Brown"},
+    {name = "Beth Lindquist"},
+]
+requires-python = ">=3.9"
+dependencies = [
+    "corner==2.2.3",
+    "emcee==3.1.6",
+    "ipykernel==6.29.5",
+    "ipython==8.31.0",
+    "matplotlib==3.10.0",
+    "notebook==7.6.2",
+    "numpy==2.2.2",
+    "pandas==2.2.3",
+    "scipy==1.15.1",
+    "statsmodels==0.14.4",
+]
+
+[tool.setuptools]
+packages = ["eosuq"]

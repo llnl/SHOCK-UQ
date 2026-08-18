@@ -43,17 +43,12 @@ If you use the code or methods from this repository in your research, please cit
     source .venv/bin/activate
 ```
 
-4. **Install dependencies**
-```bash
-    pip install -r requirements.txt
-```
-
-5. **Install the `eosuq` package locally**
+4. **Install the `eosuq` package with all dependencies**
 ```bash
     pip install -e .
 ```
 
-6. **Launch Jupyter notebook** The notebook is located in the `notebooks` directory.
+5. **Launch Jupyter notebook** The notebook is located in the `notebooks` directory.
 
 ## Contributors
 
